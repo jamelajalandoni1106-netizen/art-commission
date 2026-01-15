@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ﾌﾌﾑﾶﾶ.com</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <!-- You can also seperate each components to a another css style -->
+        <!-- Atleast this way it's more organized -->
+        <link rel="stylesheet" href="CSS/ProductViewStyle.css">
+        <link rel="stylesheet" href="CSS/Banner.css">
+        <link rel="stylesheet" href="CSS/MainStyle.css">
+        <link rel="stylesheet" href="CSS/HeaderSidebarStyle.css">
+        <script type="text/javascript" src="ItemInventory.js"></script>
+    </head>
+    <body>
+        <!-- You can add multiple classes to one tag by seperating each with a space -->
+        <!-- for example: class="cssClass1 cssClass2 cssClass3" -->
+        
+
+        <!-- Sidebar Component -->
+        <div id="sidebar" class="sidebar">
+            <div class="header">
+                <h2>Guest account</h2>
+                <p>user id: 123456789</p>
+            </div>
+
+            <!-- Add groups by adding a new "section" tag -->
+            <div class="sidebar-item-holder">
+                <section>
+                    <h3 id="group-name">Categories</h3>
+                    <a href="headshot.html">HeadShot</a>
+                    <a href="bustup.html">Bust-Up</a>
+                    <a href="halfbody.html">Half-Body</a>
+                    <a href="sketch.html">Sketch</a>
+                </section>
+
+                <br><hr> <!-- This will serve as a seperator for each group -->
+                <section>
+                    <h3 id="group-name">HOW TO ORDER</h3>
+                    <a href="https://www.facebook.com/profile.php?id=61577614875760">ﾌﾌﾑﾶﾶ</a>
+                    <a href="https://forms.gle/iN9pZwgLQyyfnsFC7">COMMISSION Form</a>
+                </section>
+            </div>
+        </div>
+
+
+        <!-- Header Component -->
+        <header class="Web-Header">
+            <div class="align-center" style="gap: 30px">
+                <img src="Images/Sidebar.svg" width="25px" id="sidebarButton" onclick="ToggleSidebar();">
+                <a href="Index.html">On Sale</a>
+                <a href="About.html">About</a>
+            </div>
+
+            <h2 class="Logo"><a href="Index.html">ﾌﾌﾑﾶﾶ</a></h2>
+
+            <div class="details align-center" style="gap: 30px;">
+                <div class="search-input">
+                    <input id="searchBar" type="text" placeholder="Search..." 
+                        oninput="updateSearchResults()" 
+                        onfocusout="hideSearchResult()" 
+                        onfocusin="updateSearchResults()">
+                    <div class="search-result-modal hideSearch" id="search-result">
+                    </div>
+                </div>
+                <div class="Shoppingcart1">
+                
+            </div>
+            </div>
+        </header>
+
+
+
+        <main id="main">
+
+
+        </div>
+        <div class="main-wrapper">
+            <section class="left-section">
+                <div class="product-image" id="product-image"></div>
+                <br>
+                <h1>Customer reviews:</h1>
+                <hr>
+                <div class="review-holder" id="review-holder">
+
+                    <!-- Review Template
+                    <div class="review">
+                        <div class="review-header">
+                            
+                            <div>
+                                <div style="display: flex; align-items: center;">
+                                <p><b>Sample user here</b></p>
+                                <p style="font-size:12px; color: gray; margin-top: 2px; margin-left: 10px;">9/28/2024</p>
+                                </div>
+                                <div class="star-container">
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bx-star'></i>
+                                    <i class='bx bx-star'></i>
+                                </div>  
+                            </div>
+                        </div>
+                        <p style="margin-left: 45px;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    -->
+                </div>
+            </section>
+
+            <section class="right-section">
+                <div class="product-details">
+                    <div style="display: flex; align-items: center;">
+                        <i class='bx bx-chevron-left' id="goBack" onclick="goBack()"></i>
+                        <h4 id="product-type">Product Type</h4>
+                    </div>
+                    <h1 style="font-size: 40px;" id="product-name">Product name that's long</h1>
+                    <div class="star-container" id="product-star-container"></div>  
+
+                    <br><br><br>
+                    <h2 id="product-discount">-40%</h2>
+                    <h1 style="font-size:40px;" id="product-price">₱ 1000.00 <span id="product-discount-price">₱ 1000.00</span></h1>
+                    <br>
+                    <h4>Description:</h4>
+                    <hr>
+                    <p id="product-description"> 
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <br>
+                    <h4>Details:</h4>
+                    <hr>
+                    <p id="product-details"> 
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Insert and create footer that will be appealing for all HTML pages -->
+        <footer>
+            <h2><a href="Index.html">ﾌﾌﾑﾶﾶ</a></h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61577614875760"><i class='bx bxl-facebook-square'></i></a>
+                <a href="#"><i class='bx bxl-gmail'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+            </div>
+            <div class="page-links">
+                <a href="Index.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="About.html">Services</a>
+                <a href="https://www.facebook.com/profile.php?id=61577614875760">Blog</a>
+                <a href="https://www.facebook.com/profile.php?id=61577614875760">Contact</a>
+            </div>
+            <p>© 2026 All rights reserved. </p>
+        </footer>
+
+        <!-- An abosulte position button that will make the website scroll to the very top -->
+        <p class="goUp" onclick="goUp()"><i class='bx bx-chevrons-up'></i></p>
+
+        </main>
+
+        <script src="logic.js"></script>
+        <script src="PViewLogic.js"></script>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+.banner {
+	height: 700px;
+}
+
+.slide_showContainer {
+	height: 89%;
+	display: flex;
+	justify-content: center;
+}
+
+.bottomDiv {
+	color: black;
+	padding-top: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+}
+
+.slide1 {
+	width: 100%;
+	height: auto;
+	display: none;
+	position: center;
+	transition: 0.2s;
+}
+
+.slide1 .numbertext {
+	position: absolute;
+	top: 98%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.slide1 div {
+	text-align: center;
+}
+
+.slide1 img {
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 0 20px 0 gray;
+}
+
+.active {
+	display: block;
+}
+
+.prev, .dot {
+	user-select: none;
+	cursor: pointer;
+}
+
+.prev {
+	padding: 5px 10px;
+	padding-top: 3px;
+	border-radius: 10px;
+}
+
+.dot {
+	padding: 0 2px;
+	border-radius: 5px;
+}
+
+.prev:hover, .dot:hover {
+	background-color: lightgray;
+}
+
+.dot-container {
+	display: flex;
+	gap: 10px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}

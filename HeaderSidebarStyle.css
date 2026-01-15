@@ -1,0 +1,198 @@
+/*
+	This CSS file is only for the Header and the Sidebar
+	open the MainStyle.css or make another css for your edits
+*/
+.align-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Logo {
+	position: absolute;
+	font-family: "Lexend Deca";
+	transform: translateX(-50%);
+	left: 50%;
+	color: white;
+}
+
+.Logo span {
+	text-decoration: underline;
+	color: white;
+}
+
+.Web-Header {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	height: 50px;
+	z-index: 2;
+	background-color: #2b252f;
+	padding: 12px 0px;
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 1px 10px 0px rgba(20, 20, 30, 0.15);
+}
+
+.Web-Header a {
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	text-decoration: none;
+	transition: border 0.25s;
+}
+
+.Web-Header a::after {
+  	content: '';
+	width: 0px;
+	height: 2px;
+	display: block;
+	background: rgb(255, 255, 255);
+	transition: 0.15s;
+}
+
+.Web-Header a:hover::after {
+	width: 100%;
+}
+
+.Web-Header input {
+	background-color: #46474F;
+	width: 300px;
+	border-radius: 5px;
+	padding: 10px 15px;
+	outline: none;
+	border: none;
+	color: white;
+	font-size: 16px;
+}
+
+.Web-Header .search-input {
+	position: relative;
+}
+
+.search-input{
+	padding-left: 1250px;
+}
+
+.Web-Header .search-result-modal {
+	box-shadow: 0 0 10px 0 rgba(0, 0, 30, 0.5);
+	background-color: white;
+	position: absolute;
+	border-radius: 5px;
+	padding: 20px 0;
+	top: 120%;
+	left: 0;
+	width: 100%;
+	transition: 0.2s;
+}
+
+.hideSearch {
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.2s;
+}
+
+.Web-Header .search-result-modal p {
+	cursor: pointer;
+	padding: 10px 20px;
+	margin: 0;
+}
+
+.Web-Header .search-result-modal p:hover {
+	background-color: lightgray;
+}
+
+.Web-Header #sidebarButton {
+	padding: 10px;
+	margin-left: 14px;
+	border-radius: 15px;
+	transition: 0.2s;
+	cursor: pointer;
+}
+
+.Web-Header .details img {
+	padding: 5px;
+	border-radius: 10px;
+	transition: 0.2s;
+}
+
+.Web-Header #sidebarButton:hover,
+.Web-Header .details img:hover {
+	background-color: #45464F;
+}
+
+#sidebar {
+	top: 0px;
+	z-index: 1;
+	position: fixed;
+	background-color: #25262F;
+	color: whitesmoke;
+	width: 300px;
+	height: 100%;
+	border-radius: 0 0 5px 0;
+	transition: 0.25s;
+	padding-top: 70px;
+	box-shadow: 0 10px 20px 0 rgba(20, 20, 30, 0.3);
+}
+
+#sidebar .header {
+	padding: 20px;
+	background-color: #18191F;
+	color: white;
+}
+
+#sidebar .header img {
+	float: left;
+	margin-right: 15px;
+}
+
+#sidebar hr {
+	outline-color: rgb(0, 0, 0);
+	border-color: rgb(0, 0, 0);
+}
+
+.sidebar { left: -315px; }
+.show { left: 0px; }
+
+
+.sidebar-item-holder {
+	padding: 20px;
+}
+
+.sidebar-item-holder section #group-name {
+	padding: 10px 0;
+}
+
+.sidebar-item-holder section a {
+	text-decoration: none;
+	font-family: "Inter";
+	border-radius: 10px;
+	padding-left: 15px;
+	display: block;
+	padding: 7px;
+	color: rgb(210, 215, 220);
+	transition: 0.15s;
+}
+
+.sidebar-item-holder section a:hover {
+	padding-left: 25px;
+	background-color: #45464F;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}

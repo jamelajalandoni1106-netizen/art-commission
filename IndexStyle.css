@@ -1,0 +1,144 @@
+/*
+	Any Style that only appears in the Index.html should be written	here
+*/
+
+main {
+	color: black;
+}
+
+.star-container i {
+	color: #FFaa00;
+}
+
+.popular-product, .flash-sale {
+    padding: 40px 80px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.popular-product {
+    background-color: white;
+}
+
+.flash-sale {
+	background-color: white;
+}
+
+.Categories {
+	padding: 40px 80px;
+	display: flex;
+	flex-direction: column;
+}
+
+.Categories-grid {
+	padding: 5px;
+	display: grid;
+	width: 100%;
+	height: 700px;
+	gap: 20px;
+	box-sizing: border-box;
+	background-color: white;
+}
+
+.Categories-grid div:nth-child(1) {
+	grid-area: 1 / 1 / 3 / 3;
+}
+
+.Categories-grid div:nth-child(2) {
+	grid-area: 1 / 3 / 1 / 7;
+}
+
+.Categories-grid div:nth-child(3) {
+	grid-area: 2 / 3 / 2 / 5;
+}
+
+.Categories-grid div:nth-child(4) {
+	grid-area: 2 / 5 / 2 / 7;
+}
+
+.Categories-grid div:nth-child(5) {
+	grid-area: 3 / 1 / 3 / 3;
+}
+
+.Categories-grid div:nth-child(6) {
+	grid-area: 3 / 1 / 3 / 3;
+}
+
+.Categories-grid div:nth-child(7) {
+	grid-area: 3 / 1 / 3 / 3;
+}
+
+.Categories-grid div {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.Categories-grid div .image {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	transition: 0.2s;
+}
+
+.Categories-grid div:nth-child(1) .image {background-image: url("../image/hs1.jpg");}
+.Categories-grid div:nth-child(2) .image {background-image: url("../image/slide1.jpg");}
+.Categories-grid div:nth-child(3) .image {background-image: url("../image/hb1.jpg");}
+.Categories-grid div:nth-child(4) .image {background-image: url("../image/sketch1.jpg");}
+
+.Categories-grid div:hover .image {
+	scale: 1.1;
+}
+.Categories-grid div:hover .details {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.Categories-grid div .details {
+	position: absolute;
+	padding: 0 20px;
+	width: 100%;
+	top: 100%;
+	transform: translateY(-100%);
+	background-image: none;
+	background-color: rgba(0, 0, 0, 0.1);
+	color: white;
+	transition: 0.2s;
+}
+
+.Categories-grid div .details h2 {
+	margin-bottom: -12px;
+}
+
+.Categories-grid div .details p {
+	width: 50%;
+}
+
+.Categories-grid div .details a {
+	margin-bottom: 15px;
+	margin-right: 40px;
+	text-decoration: underline;
+	font-weight: bold;
+	color: white;
+	float: right;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:1000px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
